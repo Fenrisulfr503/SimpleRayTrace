@@ -1,19 +1,49 @@
 #include "Vector3.h"
+#include <math.h>
 
-void Vector3::displayTable()const
-{
-    int x = 5;
-    // Nothing works.
-}
 
-Vector3& Vector3::operator+(const Vector3& t)
+Vector3& Vector3::operator=(const Vector3& rhs)
 {
-	x += t.x; y += t.y; z += t.z;
-	return *this;
-}
+    if(this != &rhs)
+    {
+        x = rhs.x; y = rhs.y; z = rhs.z;
+    }
 
-Vector3& Vector3::operator=(const Vector3& t)
-{
-    int y = 10;
     return *this;
 }
+
+Vector3 Vector3::operator+(const Vector3& rhs)const
+ {
+ 	return Vector3( x + rhs.x, y + rhs.y, z + rhs.z);
+ }
+
+Vector3 Vector3::operator-(const Vector3& rhs)const
+ {
+ 	return Vector3( x - rhs.x, y - rhs.y, z - rhs.z);
+ }
+
+Vector3 Vector3::operator*(const Vector3& rhs)const
+ {
+ 	return Vector3( x * rhs.x, y * rhs.y, z * rhs.z);
+ }
+
+Vector3 Vector3::operator/(const Vector3& rhs)const
+ {
+ 	return Vector3( x / rhs.x, y / rhs.y, z / rhs.z);
+ }
+
+Vector3 Vector3::operator*(const float val)const
+ {
+     return Vector3( x * val, y * val, z * val);
+ }
+
+Vector3 Vector3::operator/(const float val)const
+ {
+     return Vector3( x / val, y / val, z / val);
+ }
+
+
+ float Vector3::length()const
+ {
+     return static_cast<float>(sqrt(x*x + y*y + z*z));
+ }
