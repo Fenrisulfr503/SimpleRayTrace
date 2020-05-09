@@ -19,8 +19,20 @@ public:
 	Vector3 operator*(const float val)const;
 	Vector3 operator/(const float val)const;
 
+	Vector3& operator+=(const Vector3& rhs);
+	Vector3& operator-=(const Vector3& rhs);
+	Vector3& operator*=(const Vector3& rhs);
+	Vector3& operator/=(const Vector3& rhs);
+	Vector3& operator*=(const float val);
+	Vector3& operator/=(const float val);
+
 	float length()const;
+
 
 public:
 	float x, y, z;
 };
+
+
+float dot(const Vector3& lhs, const Vector3& rhs);
+Vector3 cross(const Vector3& lhs, const Vector3& rhs);

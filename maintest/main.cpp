@@ -1,17 +1,14 @@
 #include "gtest/gtest.h"
-#include "Vector3.h"
+#include "test_vector.h"
 
 
-// int main()
-// {
-//     Table a;
-//     a.displayTable();
-//     a = Table();
-// }
 
-TEST(TESTA, SUBTEST)
+TEST(Vector3Operation, Vector3Inization)
 {
-	Vector3 vec0{ 1, 2, 3 };
-	vec0 = vec0 + vec0;
-    ASSERT_EQ(vec0.x, 2);
+    ASSERT_EQ(TestInizationVector3(), true);
+}
+
+TEST(Vector3Operation, Vector3Operation)
+{
+    ASSERT_EQ(TestOperationVector3(), true);
 }
