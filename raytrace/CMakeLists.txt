@@ -6,7 +6,8 @@ project( RayTrace )
 set( SOURCE 
       Vector3.cpp
       File.cpp
-      ppm.cpp)
+      ppm.cpp
+      Ray.cpp)
 
 
 add_library(RayTrace STATIC ${SOURCE})

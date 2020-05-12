@@ -9,7 +9,7 @@ public:
     PPm(const std::string& filename, int _columns, int _rows);
     ~PPm();
 
-    void AppendLine();
+    void AppendContent( std::string& content);
 
 private:
     std::string filepath;

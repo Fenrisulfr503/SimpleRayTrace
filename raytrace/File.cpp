@@ -10,7 +10,6 @@ FileInput::~FileInput()
     delete _is;
 }
 
-
 bool FileInput::Read(char c[/*n*/], int n)
 {
     _is->read (c, n);
@@ -28,13 +27,11 @@ void FileInput::Seekg(Int64 pos)
     _is->seekg (pos);
 }
 
-
-
-
 FileOutput::FileOutput(const std::string& filename): _os(new std::ofstream (filename))
 {
 
 }
+
 FileOutput::~FileOutput()
 {
     delete _os;
@@ -45,8 +42,6 @@ bool FileOutput::write(char c[/*n*/], int n)
     _os->write(c, n);
     return true;
 }
-
-
 
 Int64 FileOutput::Tellg()
 {
