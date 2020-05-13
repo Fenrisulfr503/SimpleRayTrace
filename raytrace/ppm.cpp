@@ -21,7 +21,7 @@ PPm::~PPm()
 
 }
 
-void PPm::AppendContent( std::string& content)
+void PPm::AppendContent( std::string content)
 {
     context += content;
 }

@@ -21,7 +21,7 @@ Vector3  Ray::Direct()const
     return direct;
 }
 
-Vector3& Ray::PointAt(float t)
+Vector3 Ray::PointAt(float t)
 {
     return origin + direct * t;
 }

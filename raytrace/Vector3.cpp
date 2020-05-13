@@ -78,14 +78,14 @@ Vector3& Vector3::operator/=(const float val)
 
 float Vector3::length()const
 {
-    return static_cast<float>(sqrt(x*x + y*y + z*z));
+    return float(sqrt(x*x + y*y + z*z));
 }
 
 
 
 float dot(const Vector3& lhs, const Vector3& rhs)
 {
-    return lhs.x * rhs.x + lhs.y * rhs.y + lhs.z + rhs.z;
+    return lhs.x * rhs.x + lhs.y * rhs.y + lhs.z * rhs.z;
 }
 
 Vector3 cross(const Vector3& lhs, const Vector3& rhs)
@@ -93,4 +93,10 @@ Vector3 cross(const Vector3& lhs, const Vector3& rhs)
     return Vector3 (lhs.y * rhs.z - lhs.z * rhs.y,
         lhs.z * rhs.x - lhs.x * rhs.z,
         lhs.x * rhs.y - lhs.y * rhs.x);
+}
+
+
+Vector3 Normilize(const Vector3& v)
+{
+    return v / v.length();
 }

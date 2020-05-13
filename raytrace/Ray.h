@@ -14,6 +14,6 @@ public:
     ~Ray();
     Vector3  Origin()const;
     Vector3  Direct()const;
-    Vector3& PointAt(float t);
+    Vector3  PointAt(float);
 };
 

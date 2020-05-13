@@ -33,6 +33,6 @@ public:
 	float x, y, z;
 };
 
-
+Vector3 Normilize(const Vector3& v);
 float dot(const Vector3& lhs, const Vector3& rhs);
 Vector3 cross(const Vector3& lhs, const Vector3& rhs);
